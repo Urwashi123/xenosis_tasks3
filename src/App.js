@@ -1,26 +1,30 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AuthProvider from './context/AuthContext';
-import TaskProvider from './context/TaskContext';
-import Auth from './components/Notification'
-import TaskList from './components/TaskList';
-import TaskForm from './components/TaskForm';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+//import { CartProvider } from './CartContext';
+import ProductList from './components/ProductList';
+import Cart from './components/cart';
+import Checkout from './components/checkout';
+import OrderConfirmation from './components/orderconfirmation';
+import './components/styles.scss';
+
+const products = [
+    { id: 1, name: 'Product 1', description: 'Description 1', price: 29.99 },
+    { id: 2, name: 'Product 2', description: 'Description 2', price: 39.99 },
+    { id: 3, name: 'Product 3', description: 'Description 3', price: 49.99 },
+];
 
 const App = () => {
     return (
-        <AuthProvider>
-            <TaskProvider>
-                <Router>
-                    <div className="App">
-                        <Routes>
-                            <Route path="/" element={<Auth />} />
-                            <Route path="/tasks" element={<TaskList />} />
-                            <Route path="/tasks/new" element={<TaskForm />} />
-                        </Routes>
-                    </div>
-                </Router>
-            </TaskProvider>
-        </AuthProvider>
+        <CartProvider>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<ProductList products={products} />} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/checkout" element={<Checkout />} />
+                    <Route path="/order-confirmation" element={<OrderConfirmation />} />
+                </Routes>
+            </Router>
+        </CartProvider>
     );
 };
 

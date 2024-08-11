@@ -1,98 +1,35 @@
-/* General Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-.App {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+.product-list, .cart, .checkout {
+  margin: 20px;
 }
 
-/* Form Styles */
-form {
-  background-color: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
-
-form input[type="text"],
-form input[type="email"],
-form input[type="password"] {
-  width: 100%;
+.product-item, .cart-item {
+  border: 1px solid #ccc;
   padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  margin: 10px 0;
 }
 
-form input[type="submit"] {
-  background-color: #5cb85c;
-  color: #fff;
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
   border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-}
-
-form input[type="submit"]:hover {
-  background-color: #4cae4c;
-}
-
-/* Task List Styles */
-.TaskList {
-  margin-bottom: 20px;
-}
-
-.TaskList div {
-  background-color: #fff;
-  padding: 15px;
-  margin-bottom: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
-
-.TaskList h3 {
-  margin: 0 0 10px;
-  font-size: 1.2em;
-}
-
-.TaskList p {
-  margin: 5px 0;
-}
-
-.TaskList button {
-  background-color: #d9534f;
-  color: #fff;
-  border: none;
-  padding: 7px 10px;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-.TaskList button:hover {
-  background-color: #c9302c;
+button:hover {
+  background-color: #45a049;
 }
 
-/* Notification Styles */
-.notification {
-  background-color: #dff0d8;
-  color: #3c763d;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #d6e9c6;
-  border-radius: 5px;
+.checkout-form {
+  max-width: 400px;
+  margin: auto;
 }
 
-.notification.error {
-  background-color: #f2dede;
-  color: #a94442;
-  border-color: #ebccd1;
+.checkout-form .error {
+  color: red;
+  margin-top: 10px;
 }
